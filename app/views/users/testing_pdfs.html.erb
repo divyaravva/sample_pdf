@@ -1,0 +1,32 @@
+<table style="width: 1000px">
+	<tr>
+		<td>Name</td>
+		<td>Email Address</td>
+		<td>Active?</td>
+		<td>Gender</td>
+		<td>Role</td>
+	</tr>
+
+	<%unless @users.blank?%>
+		<%@users.all.each do |each_user|%>
+		<tr>
+			<td><%= each_user.name%></td>
+			<td><%= each_user.email_address%></td>
+			<td><%= each_user.is_active%></td>
+			<td><%= each_user.gender%></td>
+			<td><%= each_user.role%></td>
+		</tr>
+		<%end%>
+	<%end%>
+</table>
+
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+</style>

@@ -1,0 +1,13 @@
+<h1>Testing PDFs</h1>
+<p>Click on image to generate PDF</p>
+<div>
+	<%= image_tag "pdf.jpg", :onclick=>"generate_pdf()", class: "pdf_icon", :style => "cursor: pointer;"%>
+</div>
+
+
+<script type="text/javascript">
+function generate_pdf()
+{
+    window.location="/users/generate_pdf";
+}
+</script>
